@@ -41,4 +41,8 @@ app.on('activate', () => {
 
 app.on('ready', () => {
 	mainWindow = createMainWindow();
+	let name = BrowserWindow
+    .addDevToolsExtension('C://Users//torodrig//AppData//Local//Google//Chrome//User Data//Default//Extensions//elgalmkoelokbchhkhacckoklkejnhcd//1.2.7_0');
+	console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   " + name);
+	mainWindow.webContents.openDevTools(detachDevTool ? { mode: 'detach' } : undefined);
 });
